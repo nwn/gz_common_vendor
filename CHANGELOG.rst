@@ -2,6 +2,11 @@
 Changelog for package gz_common_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add support for the `<pkg>::<pkg>` and `<pkg>::all` targets, fix sourcing of dsv files
+* Contributors: Addisu Z. Taddese
+
 0.0.2 (2024-04-08)
 ------------------
 * Require calling find_package on the underlying package
