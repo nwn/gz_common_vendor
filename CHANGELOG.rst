@@ -2,6 +2,11 @@
 Changelog for package gz_common_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Update vendored package version to 5.6.0
+* Contributors: Addisu Z. Taddese
+
 0.0.4 (2024-04-25)
 ------------------
 * Use an alias target for root library
