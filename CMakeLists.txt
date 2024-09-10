@@ -6,6 +6,7 @@ project(gz_common_vendor)
 set(LIB_VER_MAJOR 6)
 set(LIB_VER_MINOR 0)
 set(LIB_VER_PATCH 0)
+set(LIB_VER_SUFFIX "-pre2")
 
 # Derived variables
 set(LIB_NAME gz-common)
@@ -22,6 +23,7 @@ find_package(ament_cmake_export_dependencies REQUIRED)
 find_package(gz_cmake_vendor REQUIRED)
 find_package(gz_math_vendor REQUIRED)
 find_package(gz_utils_vendor REQUIRED)
+find_package(spdlog_vendor REQUIRED)
 
 # Set the VERSION_MATCH to "EXACT" by default, but relax the requirement
 # if we are users are building from source (determined by the
@@ -41,9 +43,7 @@ find_package(${LIB_NAME_FULL} ${VERSION_MATCH} ${LIB_VER} COMPONENTS all QUIET)
 ament_vendor(${LIB_NAME_UNDERSCORE}_vendor
   SATISFIED ${${LIB_NAME_FULL}_FOUND}
   VCS_URL https://github.com/gazebosim/${GITHUB_NAME}.git
-  VCS_VERSION ${GITHUB_NAME}${LIB_VER_MAJOR}_${LIB_VER}
-  CMAKE_ARGS
-    -DBUILD_DOCS:BOOL=OFF
+  VCS_VERSION ${GITHUB_NAME}${LIB_VER_MAJOR}_${LIB_VER}${LIB_VER_SUFFIX}
   GLOBAL_HOOK
 )
 
@@ -62,6 +62,7 @@ ament_export_dependencies(
   gz_cmake_vendor
   gz_math_vendor
   gz_utils_vendor
+  spdlog_vendor
 )
 
 if(NOT ${${LIB_NAME_FULL}_FOUND})
