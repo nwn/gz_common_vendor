@@ -2,8 +2,8 @@
 Changelog for package gz_common_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.2.0 (2024-09-30)
+------------------
 * Bump version to 6.0.0 (`#4 <https://github.com/gazebo-release/gz_common_vendor/issues/4>`_)
 * Apply prerelease suffix (`#3 <https://github.com/gazebo-release/gz_common_vendor/issues/3>`_)
   * Apply prerelease suffix
